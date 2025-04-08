@@ -35,7 +35,7 @@ y <- estimateDisp(y, design)
 # lib.size (total counts) and norm.factors (normalization factors calculated using TMM) 
 libsize <- y$samples$lib.size
 normfactors <- y$samples$norm.factors
-eff_libsize <- libsize*normfactors
+efflibsize <- libsize*normfactors
 
 # run edgeR and save size factors and weights
 fit <- glmFit(y, design)

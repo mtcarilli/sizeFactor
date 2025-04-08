@@ -27,8 +27,8 @@ nonzero_gene_counts
 EOF
 
 for i in "${!count_path_list[@]}"; do
-    count_path="${count_path_list[$i]}"
-    results_path="${results_path_list[$i]}"
+    count_path="../data/bottomly/${count_path_list[$i]}"
+    results_path="../results/bottomly/${results_path_list[$i]}"
     echo $count_path
     Rscript runDESeq2EdgeR.R --count_path $count_path --results_path $results_path --reps1 10 --reps2 11
     python runGLMfit.py --count_path $count_path --results_path $results_path
