@@ -3,7 +3,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--count_path")
 parser.add_argument("--results_path")
-parser.add_argument("--ridge_factor",default=1e-6,type=np.float)
+parser.add_argument("--ridge_factor",default=1e-6,type=np.float64)
 args = parser.parse_args()
 count_path = args.count_path
 results_path = args.results_path
